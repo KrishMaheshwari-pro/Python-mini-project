@@ -1,0 +1,105 @@
+
+
+#Program to Generate Fibonacci Series:
+
+
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
+
+terms = int(input("Enter the number of terms: "))
+fibonacci(terms)
+
+#Program to Calculate Factorial Using a Loop:
+
+
+def factorial(n):
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+    return result
+
+num = int(input("Enter a number: "))
+print(f"Factorial of {num} is {factorial(num)}")
+
+
+# Program to Check if a Number is Armstrong:
+
+
+def is_armstrong(num):
+    digits = [int(d) for d in str(num)]
+    power = len(digits)
+    return sum([d**power for d in digits]) == num
+
+number = int(input("Enter a number: "))
+if is_armstrong(number):
+    print(f"{number} is an Armstrong number.")
+else:
+    print(f"{number} is not an Armstrong number.")
+
+                
+# Program to Check if a Number is a Perfect Number:
+
+
+def is_perfect(num):
+    divisors = [i for i in range(1, num) if num % i == 0]
+    return sum(divisors) == num
+
+number = int(input("Enter a number: "))
+if is_perfect(number):
+    print(f"{number} is a perfect number.")
+else:
+    print(f"{number} is not a perfect number.")
+
+
+                
+#Program to Check if a Number is a Strong Number: (A strong number is a number whose sum of the factorials of digits is equal to the number itself.)
+
+
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+def is_strong(num):
+    return sum(factorial(int(d)) for d in str(num)) == num
+
+number = int(input("Enter a number: "))
+if is_strong(number):
+    print(f"{number} is a strong number.")
+else:
+    print(f"{number} is not a strong number.")
+
+
+               
+# Program to Print Multiplication Tables:
+
+
+def multiplication_table(n, up_to=10):
+    for i in range(1, up_to + 1):
+        print(f"{n} x {i} = {n * i}")
+
+num = int(input("Enter a number: "))
+multiplication_table(num)
+
+
+               
+# Program to Calculate the LCM and GCD of Two Numbers:
+
+
+import math
+
+def gcd_lcm(num1, num2):
+    gcd_value = math.gcd(num1, num2)
+    lcm_value = abs(num1 * num2) // gcd_value
+    return gcd_value, lcm_value
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+gcd_value, lcm_value = gcd_lcm(num1, num2)
+print(f"GCD of {num1} and {num2} is {gcd_value}")
+print(f"LCM of {num1} and {num2} is {lcm_value}")
