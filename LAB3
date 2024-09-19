@@ -1,0 +1,71 @@
+
+
+#Program to check if the given number is a Disarium Number: (A Disarium number is a number where the sum of its digits powered by their respective positions equals the number itself, e.g., 175 is a Disarium number because ).
+
+
+def is_disarium(num):
+    digits = [int(d) for d in str(num)]
+    return sum(digit**(idx+1) for idx, digit in enumerate(digits)) == num
+
+number = int(input("Enter a number: "))
+if is_disarium(number):
+    print(f"{number} is a Disarium number.")
+else:
+    print(f"{number} is not a Disarium number.")
+
+               
+#Program to determine if a given number is a Harshad Number: (A Harshad number is a number that is divisible by the sum of its digits, e.g., 18 is a Harshad number because , and ).
+
+def is_harshad(num):
+    digit_sum = sum(int(digit) for digit in str(num))
+    return num % digit_sum == 0
+
+number = int(input("Enter a number: "))
+if is_harshad(number):
+    print(f"{number} is a Harshad number.")
+else:
+    print(f"{number} is not a Harshad number.")
+
+                    
+#Program to Print Armstrong Numbers from 1 to 1000: (An Armstrong number is a number that equals the sum of its own digits each raised to the power of the number of digits, e.g., 153 is an Armstrong number because ).
+
+def is_armstrong(num):
+    digits = [int(d) for d in str(num)]
+    power = len(digits)
+    return sum(digit**power for digit in digits) == num
+
+for number in range(1, 1001):
+    if is_armstrong(number):
+        print(number, end=" ")
+
+               
+#Program to Compute the Value of X^n:
+
+def compute_xn(x, n):
+    return x**n
+
+x = float(input("Enter the value of X: "))
+n = int(input("Enter the value of n: "))
+result = compute_xn(x, n)
+print(f"{x}^{n} = {result}")
+
+               
+#Program to Calculate the value of nCr: (The formula for  is ).
+
+import math
+
+def nCr(n, r):
+    return math.factorial(n) // (math.factorial(r) * math.factorial(n - r))
+
+n = int(input("Enter value of n: "))
+r = int(input("Enter value of r: "))
+print(f"nCr of {n} and {r} is {nCr(n, r)}")
+
+               
+#Program to Count the Sum of Digits in the Entered Number:
+
+def sum_of_digits(num):
+    return sum(int(digit) for digit in str(num))
+
+number = int(input("Enter a number: "))
+print(f"Sum of digits in {number} is {sum_of_digits(number)}")
