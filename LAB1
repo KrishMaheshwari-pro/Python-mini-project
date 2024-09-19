@@ -14,6 +14,8 @@ if is_prime(number):
 else:
     print(f"{number} is not a prime number.")
 
+
+
 # Check if a number is a Palindrome:
 
 def is_palindrome(num):
@@ -47,6 +49,7 @@ def find_grade(percentage):
 
 percentage = float(input("Enter percentage: "))
 print(f"Grade: {find_grade(percentage)}")
+
 
 
 
