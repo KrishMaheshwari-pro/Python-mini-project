@@ -1,0 +1,75 @@
+# 1. Create a class called "Person" with name and age attributes.
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Creating two instances of the "Person" class.
+person1 = Person("Alice", 30)
+person2 = Person("Bob", 25)
+
+# Printing the name and age of each person.
+print("Person 1:", person1.name, ", Age:", person1.age)
+print("Person 2:", person2.name, ", Age:", person2.age)
+
+print("\n")
+
+# 2. Create a class named 'Student' with name and roll_no attributes.
+class Student:
+    def __init__(self, name, roll_no):
+        self.name = name
+        self.roll_no = roll_no
+
+# Creating an instance of Student and assigning values to name and roll_no.
+student = Student("John", 2)
+
+# Printing the name and roll number of the student.
+print("Student Name:", student.name)
+print("Student Roll No:", student.roll_no)
+
+print("\n")
+
+# 3. Define a class to represent a bank account with deposit, withdraw, and balance checking methods.
+class BankAccount:
+    def __init__(self, owner):
+        self.owner = owner
+        self.balance = 0
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            print(f"Deposited ${amount}. New balance is: ${self.balance}")
+        else:
+            print("Deposit amount must be positive.")
+
+    def withdraw(self, amount):
+        if amount > 0 and amount <= self.balance:
+            self.balance -= amount
+            print(f"Withdrew ${amount}. New balance is: ${self.balance}")
+        else:
+            print("Insufficient balance or invalid amount.")
+
+    def check_balance(self):
+        print(f"Current balance for {self.owner}: ${self.balance}")
+
+# Creating a bank account instance and performing operations.
+account = BankAccount("Alice")
+account.deposit(100)
+account.withdraw(50)
+account.check_balance()
+
+print("\n")
+
+# 4. Define a class "Student" with attributes like name and age.
+class StudentDetails:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Creating multiple Student objects to represent different students.
+student1 = StudentDetails("Mike", 20)
+student2 = StudentDetails("Emma", 22)
+
+# Printing details of each student.
+print("Student 1:", student1.name, ", Age:", student1.age)
+print("Student 2:", student2.name, ", Age:", student2.age)
