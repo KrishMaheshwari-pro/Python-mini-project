@@ -1,0 +1,44 @@
+# 1. Separate the string into comma-separated values.
+X = "India.is.my.country"
+separated = X.replace(".", ",")
+print("Comma-separated values:", separated)
+
+# 2. Sort strings alphabetically.
+strings = ["apple", "banana", "cherry", "date"]
+sorted_strings = sorted(strings)
+print("Alphabetically sorted strings:", sorted_strings)
+
+# 3. Remove a given character from a string (remove all occurrences of '.').
+Y = "M.A.N.I.P.A.L"
+removed_char = Y.replace(".", "")
+print("String after removing character '.':", removed_char)
+
+# 4. Remove all dots from a string.
+removed_dots = Y.replace(".", "")
+print("String after removing all dots:", removed_dots)
+
+# 5. Take an input from a user as a string, then reverse it.
+user_input = input("Enter a string to reverse: ")
+reversed_string = user_input[::-1]
+print("Reversed string:", reversed_string)
+
+# 6. Check if a string contains only digits.
+string_to_check = input("Enter a string to check for digits only: ")
+is_digit_only = string_to_check.isdigit()
+print("Contains only digits:", is_digit_only)
+
+# 7. Check if a string is a palindrome.
+string_palindrome = input("Enter a string to check if it's a palindrome: ")
+is_palindrome = string_palindrome == string_palindrome[::-1]
+print("Is palindrome:", is_palindrome)
+
+# 8. Find the number of vowels in a string.
+string_with_vowels = input("Enter a string to count vowels: ")
+vowels = "aeiouAEIOU"
+vowel_count = sum(1 for char in string_with_vowels if char in vowels)
+print("Number of vowels:", vowel_count)
+
+# 9. Check if every word in a string begins with a capital letter.
+string_title_check = input("Enter a string to check title case: ")
+is_title_case = string_title_check.istitle()
+print("Every word begins with a capital letter:", is_title_case)
