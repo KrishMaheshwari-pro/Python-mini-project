@@ -1,0 +1,71 @@
+# Question 1
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def display(self):
+        print(f"Name: {self.name}, Age: {self.age}")
+
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)
+        self.student_id = student_id
+    def show_details(self):
+        self.display()
+        print(f"Student ID: {self.student_id}")
+
+student = Student("John", 20, "S1234")
+student.show_details()
+
+# Question 2
+class Vehicle:
+    def info(self):
+        print("This is a vehicle")
+
+class Car(Vehicle):
+    def car_info(self):
+        print("This is a car")
+
+class ElectricCar(Car):
+    def battery_info(self):
+        print("This car has a battery")
+
+electric_car = ElectricCar()
+electric_car.info()
+electric_car.car_info()
+electric_car.battery_info()
+
+# Question 3
+class Teacher:
+    def description(self):
+        print("This is a teacher")
+
+class Author:
+    def description(self):
+        print("This is an author")
+
+class TutorAuthor(Teacher, Author):
+    def show_profession(self):
+        Teacher.description(self)
+        Author.description(self)
+
+tutor_author = TutorAuthor()
+tutor_author.show_profession()
+
+# Question 4
+class Animal:
+    def sound(self):
+        print("Animals make sound")
+
+class Dog(Animal):
+    def sound(self):
+        print("Dog barks")
+
+class Cat(Animal):
+    def sound(self):
+        print("Cat meows")
+
+dog = Dog()
+cat = Cat()
+dog.sound()
+cat.sound()
